@@ -1,0 +1,13 @@
+# ISIT 300 Week 2–3 static server.
+# Style A: nginx already runs.
+# TODO(student) Week 3: bind-mount ./site to /usr/share/nginx/html
+# so resume.html edits on the host appear in the browser.
+
+services:
+  web:
+    image: nginx:1.27-alpine
+    ports:
+      - "8080:80"
+    # TODO(student): uncomment the volume after you can explain host vs container paths.
+    # volumes:
+    #   - ./site:/usr/share/nginx/html:ro
